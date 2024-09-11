@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+            crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Judson:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,100;0,300;1,100;1,300&family=Suez+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css"  th:href="@{/css/styles.css}">
+    <link rel="stylesheet" href="../css/login.css" th:href="@{/css/login.css}">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script
+            src="https://kit.fontawesome.com/7fe8d89f56.js"
+            crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+</head>
+<body>
+<header th:fragment="header" class="fixed-top bg-light mb-5" >
+    <span class=" banner">Early Bird Special on Wednesdays!</span>
+    <img th:src="@{/media/tbb-logo.png}" class="d-block mx-auto" alt="Logo" width="350px">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" th:href="@{index}" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/our-story}" href="./html/our-story.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/menu}" href="./html/menu.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  th:href="@{/showNewReservationForm}" href="./html/reservation.html">Reservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="./html/gallery.html" th:href="@{/gallery}" >Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="./html/get-in-touch.html" th:href="@{/get-in-touch}" >Contact US</a>
+                    </li>
+                    <!--          <li class="nav-item dropdown">-->
+                    <!--&lt;!&ndash;            <a class="nav-link " th:href="@{/login}" href="#" id="navbarDropdownMenuLink" >&ndash;&gt;-->
+                    <!--&lt;!&ndash;              More&ndash;&gt;-->
+                    <!--&lt;!&ndash;            </a>&ndash;&gt;-->
+                    <!--            <a class="dropdown-toggle"  href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+                    <!--              Log In-->
+                    <!--            </a>-->
+                    <!--            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+                    <!--              <li><a class="dropdown-item" href="#" th:href="@{/login}">Customer</a></li>-->
+                    <!--              <li><a class="dropdown-item" href="#">Employee</a></li>-->
+                    <!--              <li><a class="dropdown-item" href="#">Manager</a></li>-->
+                    <!--            </ul>-->
+                    <!--          </li>-->
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#" th:href="@{/login}">Login</a></li>
+                            <li><a class="dropdown-item" href="#" th:href="@{/listReservations}" >Manage Reservations</a></li>
+                            <li><a class="dropdown-item" href="#" th:href="@{/users/listUsers}">Manage Users</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!--<div th:replace="fragrams/header :: header" />-->
+
+
+    <div   class="container-fluid login-form">
+        <form th:action="@{/users/saveUser}" th:object="${user}"  method="post">
+            <h3 class="text-center">Update User</h3>
+            <label for="firstName"> First Name <a href="#"  class=" text-danger">*</a></label><br>
+            <input type="text" id="firstName"  th:field="*{firstName}" required > <br>
+
+            <label for="lastName"> Last Name <a href="#"  class=" text-danger">*</a></label><br>
+            <input type="text" id="lastName"  th:field="*{firstName}" required> <br>
+
+            <label for="email"> Email <a href="#"  class=" text-danger">*</a></label> <br>
+            <input type="text" id="email"  th:field="*{email}" required> <br>
+
+            <label for="password"> Password <a href="#"  class=" text-danger">*</a></label> <br>
+            <input type="password" id="password" th:field="*{password}" required> <br> <br>
+
+            <button  class="signup-btn pt-2 pb-2">Update User</button>
+
+
+        </form>
+    </div>
+
+
+
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Reservation Updated</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+
+                <!-- Modal body -->
+                <div class="modal-body text-center m-5"><h3>Thank You <p id="namee"> </p></h3>
+                    <p>Your reservation has been confirmed</p>
+                    <p class="res-number">5706153446568 <br> Reservation Number</p>
+
+                    <p> Your reservation request  confirmation was sent at 7:30 AM  to the email provided.
+                        <br> Questions? Call us at 123-456-7890</p></div>
+
+                <!-- Modal footer -->
+                <!-- mod= modal upd = update -->
+                <div class="modal-footer" >
+                    <button type="button" class="btn mod-upd " data-bs-dismiss="modal"> <a th:href="@{/listUsers}" class="mod-upd-link">Update</a></button>
+                    <button type="button" class="btn  close" data-bs-dismiss="modal" >Close</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:replace="fragrams/footer :: footer"></div>
+</body>
+</html>
+

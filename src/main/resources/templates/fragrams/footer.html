@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<footer th:fragment="footer" id="footer">
+    <img th:src="@{/media/logo-2.png}" class="ft-logo img-fluid" alt="logo">
+    <div class="row text-center">
+        <div class="col-sm-4">
+            <h4>ADDRESS</h4>
+            <p>
+                1234 Dreamland Ave S, Redmond, WA, 98052
+            </p>
+        </div>
+        <div class="col-sm-4">  <h4>HOURS</h4>
+            <ul class="ft-list">
+                <li>Monday - Friday 5am-10pm</li>
+                <li>Saturday 5am-midnight</li>
+                <li>Sunday 5am-6pm</li>
+            </ul>
+        </div>
+        <div class="col-sm-4"> <h4> CONTACT US</h4>
+            <p> contact@solusperaqua.com <br>
+                +1 425-123-4567</p>
+        </div>
+    </div>
+
+</footer>
+
+</body>
+</html>

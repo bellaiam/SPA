@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"></div>
+
+<div class="container my-5">
+  <h1 class="text-center">Welcome, <span th:text="${userType}"></span>!</h1>
+  <h2 class="text-center">Reservation Details:</h2>
+  <div class="row mt-5">
+    <div class="col-md-6 offset-md-3">
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th> Phone</th>
+          <th> No. Guests </th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Addtl Info</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="reservation : ${listReservations}">
+          <td th:text="${reservation.resFirstName}"></td>
+          <td th:text="${reservation.resLastName}"></td>
+          <td th:text="${reservation.resEmail}"></td>
+          <td th:text="${reservation.resPhone}"></td>
+          <td th:text="${reservation.resNoOfGuests}"></td>
+          <td th:text="${reservation.resDate}"></td>
+          <td th:text="${reservation.resTime}"></td>
+          <td th:text="${reservation.addInfo}"></td>
+          <td>
+            <a th:href="@{/showFormForUpdate/{id}(id=${reservation.id})}" class="btn btn-update">Update</a>
+
+            <a th:href="@{/deleteReservation/{id}(id=${reservation.id})}" class="btn btn-delete">Delete</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</table>
+</div>
+<div th:replace="fragrams/footer :: footer"/>
+
+
+<script src="../js/reservation.js"></script>
+</body>
+
+</html>

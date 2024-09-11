@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Solus Per Aqua</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+    crossorigin="anonymous"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Judson:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,100;0,300;1,100;1,300&family=Suez+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/styles.css">
+  <script
+src="https://kit.fontawesome.com/7fe8d89f56.js"
+crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div th:replace="fragrams/header :: header" />
+
+    <section class="hero mt-5">
+     
+        <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="./media/home-bg-7.jpg" class="d-block w-100 img-fluid" alt="food-img">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="10000">
+                <img src="./media/home-bg-1.jpg" class="d-block w-100 img-fluid" alt="food-img">
+                <div class="carousel-caption d-none d-md-block">
+                
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="10000">
+                <img src="./media/home-bg-4.jpg" class="d-block w-100 img-fluid" alt="food-img">
+                <div class="carousel-caption d-none d-md-block">
+                  
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="10000">
+                <img src="./media/home-bg-3.0.jpg" class=" img-fluid d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./media/home-bg-5.jpg" class=" img-fluid d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+    <!-- sec = section -->
+    <section class="second-sec container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <img src="./media/home-loc.jpg" class="img-fluid" alt="location-pic" width="1000px">
+        </div>
+        <div class="col-md-4 home-text ">
+          <h6>WELCOME TO SOLUS PER AQUA</h6>
+          <h4>A place of joy and relaxation</h4>
+          <p>Questions? Details can be found here</p>
+          <a href="#footer" class="home-btn-hover" ><button class="home-btn">Visit Solus Per Aqua</button> </a>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-4 quote ">
+          <h6>WHAT PEOPLE ARE SAYING</h6>
+          <h3>"We had the absolute best relaxation time here and will definitely recommend"</h3>
+          <a href="./html/reservation.html" th:href="@{/listReservations}" class="home-btn-hover"><button class="home-btn">MAKE RESERVATION</button> </a>
+        </div>
+        <div class="col-md-8 "> <img src="./media/friends.jpg" class="img-fluid friends" width="1200px" alt="friends"> </div>
+      </div>
+    </section>
+
+
+
+  <section class="third-sec container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <img src="./media/berry-tea.jpg" class="img-fluid p-5" alt="egg-brkfst" width="700px" >
+      </div>
+      <div class="col-md-4 third-sec-txt ">
+        <h6>Enjoy a variety of complementary drinks</h6>
+        <p>Try our berry tea!!!</p>
+
+          <img src="./media/home-bg-6.jpg" class="img-fluid home-bg-6"  width="500px" alt="plate">
+
+      </div>
+    </div>
+    
+  </section>
+  <section class="fourth-sec">
+    <h6>WE OFFER PRIVATE EVENTS</h6>
+    <h4>get your birthday or a special day with your friends and family!</h4>
+  </section>
+
+
+<!-- Footer-->
+<div th:replace="fragrams/footer :: footer"/>
+</body>
+
+</html>
+
+

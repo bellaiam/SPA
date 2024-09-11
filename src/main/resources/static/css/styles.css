@@ -1,0 +1,233 @@
+
+
+:root {
+    --first-color: #ffffff;
+    --second-color: #141010;
+    --third-color: #f7e8e8;
+    --fourth-color:#f2f9f1;
+    --heading-fonts: 'Anton', sans-serif;
+    --sub-heading-fonts: 'Judson', serif;
+    --sub-heading-fonts-1:'Suez One', serif;
+    --body-fonts: 'Lato', sans-serif;
+  }
+
+
+
+  img{
+      border-radius: 5px;
+  }
+footer{
+  
+    background-image:url(../media/footer-bg.jpg);
+    color: white; 
+    
+    
+}
+
+footer h4{
+    font-family: var(--heading-fonts);
+    font-size: 30px;
+
+}
+
+
+footer p{
+    font-family: var(--body-fonts);
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.ft-logo{
+    display: block;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+.ft-list{
+    list-style: none;
+    font-family: var(--body-fonts);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.dropdown-item{
+   text-transform: uppercase;
+}
+.dropdown-item:hover{
+    background-color:var(--second-color);
+    color:var(--first-color);
+    font-weight: bold;
+}
+.banner{
+    display:block;
+    background-color: var(--second-color);
+    padding: 10PX;
+    color: var(--first-color);
+    text-align: center;
+    font-weight: bolder;
+    font-family: var(--sub-heading-fonts-fonts);
+    
+}
+
+.navbar-nav{
+   margin: 0 auto;
+  
+}
+.nav-link{
+    color: var(--second-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: var(--body-fonts);
+    font-weight: 600;
+    
+}
+
+.nav-link:hover{
+    text-decoration: none;
+    background-color: var(--second-color);
+    border-radius: 3px;
+    color:var(--first-color);
+    font-weight: bold;
+}
+
+.res-btn {
+    text-decoration: none;
+    color: white;
+    border: 3px solid wheat;
+    padding: 10px;
+    margin-bottom: 30px;
+    
+}
+
+
+
+
+
+
+.home-text{
+   padding-top: 100px;
+    
+}
+
+.home-text h6{
+    font-family: var(--heading-fonts);
+    font-size: 40px;
+}
+
+.home-text h4{
+    font-family: var(--sub-heading-fonts);
+    font-size: 40px;
+}
+
+
+
+
+
+
+  .third-sec{
+      background-color: #000000;
+      color: aliceblue;
+     
+     
+     
+  }
+
+.third-sec-txt{
+   position: relative;
+   right: 400px;
+    padding-top: 100px;
+    padding-bottom: 0px;
+    
+}
+.third-sec-txt h6{
+    font-family: var(--heading-fonts);
+     text-transform: uppercase;
+     font-size: 50px;
+ }
+
+ .third-sec-txt p{
+    font-family: var(--body-fonts);
+     text-transform: uppercase;
+     font-size: 35px;
+ }
+
+
+.second-sec{
+    
+    padding: 100px;
+    background-color: var(--fourth-color);
+}
+
+
+
+.fourth-sec{
+   padding: 150px;
+    background-color: var(--fourth-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.fourth-sec h6{
+   font-family: var(--heading-fonts);
+   font-size: 30px;
+ }
+
+ .fourth-sec h4{
+    font-family: var(--sub-heading-fonts-1);
+    font-size: 30px;
+   
+  }
+  .fourth-sec p{
+    font-family: var(--sub-heading-fonts);
+    font-size: 20px;
+  }
+
+.home-btn{
+    background-color: var(--second-color);
+    color: var(--fourth-color);
+    padding: 15px;
+    font-family: var(--body-fonts);
+    font-weight:bolder;
+    border-radius: 5px ;
+    margin-top: 10px;
+    font-size: 30px;
+    
+}
+
+.home-btn:hover{
+    background-color: var(--first-color);
+    color: var(--secondary-color);
+    
+}
+.home-btn-hover:hover{
+    color: var(--second-color);
+    font-weight: bolder;
+    
+}
+
+.quote{
+    text-align: center;
+    padding-top:300px ;
+}
+
+.quote h6{
+font-family: var(--heading-fonts);
+font-size: 40px;
+}
+
+.quote h3{
+   font-family: var(--sub-heading-fonts);
+}
+
+.error-bg{
+padding-top: 300px;
+background-color: var(--second-color);}
+
+.gallery, .get-in-touch{
+    padding:300px;
+    display: block;
+    text-align: center;
+}

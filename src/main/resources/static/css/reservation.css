@@ -1,0 +1,138 @@
+
+
+
+:root {
+    --first-color: #ffffff;
+    --second-color: #141010;
+    --third-color: #f7e8e8;
+    --fourth-color:#f2f9f1;
+    --heading-fonts: 'Anton', sans-serif;
+    --sub-heading-fonts: 'Judson', serif;
+    --sub-heading-fonts-1:'Suez One', serif;
+    --body-fonts: 'Lato', sans-serif;
+  }
+  .res h3{
+    font-family: var(--heading-fonts);
+    font-size: 60px;
+}
+
+
+
+input{
+    margin-bottom: 15px;
+    border: 3px solid var(--second-color);
+    padding: 10px;
+   
+}
+label {
+    display: block;
+   font-family: var(--sub-heading-fonts-1);
+    text-transform: uppercase;
+}
+
+
+ p{
+    font-family: var(--sub-heading-fonts-fonts);
+    font-size: 20px;
+}
+.modal-body h3 {
+    font-family: var(--sub-heading-fonts-1);
+    font-size: 30px;
+}
+
+.modal-content{
+    border: 10px solid var(--second-color);
+}
+
+
+
+h3 p {
+    font-family: var(--sub-heading-fonts);
+    font-size: 40px;
+}
+.res-number{
+    font-family: var(--sub-heading-fonts);
+    font-size: 25px; border-radius: 3px;
+}
+
+.res-phone, .res-email, .guest{
+    padding-right: 390px;
+
+    border-radius: 3px;
+
+}
+.res{
+    margin-top: 50px;
+    margin-left:300px;
+    margin-bottom: 100px;
+    background-image: url();
+
+}
+
+.add-info{
+    max-width: 586px;
+    border: 3px solid var(--second-color);
+
+    outline: none !important;
+    box-shadow: none !important
+
+
+
+}
+.res-fname, .res-lname{
+
+    padding-right: 95px;
+    border-radius: 3px;
+}
+
+
+.book-res{
+    background-color: var(--second-color);
+    color: var(--first-color);
+    font-family: var(--sub-heading-fonts);
+    font-weight: bolder;
+    font-size: 30px;
+    display: flex;
+   justify-content: center;
+   padding-left: 177px;
+    padding-right: 177px;
+}
+
+.book-res:hover{
+    background-color: var(--first-color);
+    color: var(--second-color);
+    cursor: pointer;
+    border: 3px solid var(--second-color);
+}
+
+.res-number{
+    font-weight: bold;
+}
+
+.mod-upd, .close{
+
+    color: var(--first-color);
+    background-color: var(--second-color);
+
+}.mod-upd-link{
+    text-decoration: none;
+    color: var(--first-color);
+}
+
+.mod-upd-link:hover,.close:hover{
+    color: aliceblue;
+    font-size: large;
+    font-weight: bold;
+}
+
+.modal-title{
+    font-family: var(--heading-fonts);
+}
+
+.date{
+    padding-right: 390px;
+    border-radius: 3px;
+}
+
+.time{ padding-right: 465px;
+    border-radius: 3px;}
